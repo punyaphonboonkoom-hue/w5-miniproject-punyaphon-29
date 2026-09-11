@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --dior-rouge: #A11B41;
+  --dior-rouge-dark: #7E1231;
+  --dior-gold: #C5A059;
+  --dior-gold-light: #F8F4EE;
+  --dior-nude: #FAF6F3;
+  --dior-black: #111111;
+  --dior-white: #FFFFFF;
+  --dior-gray: #E8E8E8;
+  --dior-muted: #777777;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-gold: 0 4px 15px rgba(197, 160, 89, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dior-nude);
+  color: var(--dior-black);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+h1, h2, h3, .title {
+  font-family: var(--font-serif);
+  color: var(--dior-black);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1, .title {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+h1::after, .title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--dior-gold);
+}
+
+.container, .dashboard-container, .login-box {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 45px;
+  background: var(--dior-white);
+  border: 1px solid var(--dior-gold);
+  border-radius: 4px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.login-box, .dashboard-container {
+  max-width: 520px;
+  text-align: center;
+}
+
+.subtitle, .login-box p {
+  color: var(--dior-muted);
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.btn, .add-btn, button, input[type="submit"], .edit, .delete {
+  display: inline-block;
+  background-color: var(--dior-black);
+  color: var(--dior-gold);
+  padding: 12px 24px;
+  border: 1px solid var(--dior-gold);
+  border-radius: 0px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+.btn:hover, .add-btn:hover, button:hover, input[type="submit"]:hover {
+  background-color: var(--dior-rouge);
+  color: var(--dior-white);
+  border-color: var(--dior-rouge);
+  box-shadow: var(--shadow-gold);
+}
+
+.pink, .edit {
+  background-color: var(--dior-rouge);
+  color: var(--dior-white);
+  border-color: var(--dior-rouge);
+}
+
+.pink:hover, .edit:hover {
+  background-color: var(--dior-black);
+  color: var(--dior-gold);
+  border-color: var(--dior-gold);
+}
+
+.logout, .delete {
+  background-color: transparent;
+  color: var(--dior-rouge-dark);
+  border: 1px solid var(--dior-rouge-dark);
+}
+
+.logout:hover, .delete:hover {
+  background-color: var(--dior-rouge-dark);
+  color: var(--dior-white);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--dior-black);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--dior-nude);
+  border: 1px solid var(--dior-gray);
+  border-radius: 0px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--dior-black);
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  background-color: var(--dior-white);
+  border-color: var(--dior-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--dior-white);
+  border: 1px solid var(--dior-gray);
+  padding: 25px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--dior-gold);
+  box-shadow: var(--shadow-subtle);
+  transform: translateY(-3px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin: 10px 0 5px 0;
+}
+
+.price {
+  color: var(--dior-rouge);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: var(--dior-white);
+}
+
+th {
+  background-color: var(--dior-black);
+  color: var(--dior-gold);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  padding: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--dior-gold);
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid var(--dior-gray);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+tr:nth-child(even) {
+  background-color: var(--dior-nude);
+}
+
+tr:hover {
+  background-color: var(--dior-gold-light);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.back {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: var(--dior-muted);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.back:hover {
+  color: var(--dior-gold);
+}
+
+.footer {
+  margin-top: 30px;
+  color: var(--dior-gold);
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.back-btn, 
+a.back {
+  display: inline-block;
+  background-color: #111111; /* Dior Black */
+  color: #C5A059;             /* Dior Gold */
+  border: 1px solid #C5A059;  /* Gold Accent Border */
+  padding: 10px 22px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none !important; /* Removes purple underline */
+  transition: all 0.3s ease;
+  border-radius: 0px;
+}
+
+.back-btn:hover, 
+a.back:hover {
+  background-color: #A11B41; /* Dior Rouge Red */
+  color: #FFFFFF;
+  border-color: #A11B41;
+  box-shadow: 0 4px 15px rgba(161, 27, 65, 0.25);
+}
