@@ -17,5 +17,12 @@
         </div>
         <div class="footer">Premium Cosmetic Dashboard</div>
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <?php echo date("Y"); ?> Lipstick Store. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

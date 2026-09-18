@@ -12,10 +12,6 @@ $result = mysqli_query($conn,$sql);
 <head>
     <title>จัดการลิปสติก</title>
     <link rel="stylesheet" href="style.css">
-
-    
-  
-
 </head>
 <body>
 
@@ -64,6 +60,13 @@ $result = mysqli_query($conn,$sql);
     </div>
 
 </div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; <?php echo date("Y"); ?> Lipstick Store. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>

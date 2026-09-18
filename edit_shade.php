@@ -28,5 +28,12 @@ $row = mysqli_fetch_assoc($result);
         </form>
         <a href="shades.php" class="back">← กลับหน้าจัดการเฉดสี</a>
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <?php echo date("Y"); ?> Lipstick Store. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

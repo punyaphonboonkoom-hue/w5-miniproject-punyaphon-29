@@ -34,6 +34,9 @@ body{
     margin:0;
     font-family:'Segoe UI',sans-serif;
     background:#f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container{
@@ -97,6 +100,18 @@ button:hover{
     color:#666;
 }
 
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #777;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
 </style>
 
 </head>
@@ -133,6 +148,12 @@ button:hover{
     </a>
 
 </div>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; <?php echo date("Y"); ?> Lipstick Store. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>

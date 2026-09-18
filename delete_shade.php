@@ -10,4 +10,7 @@ WHERE shade_id='$id'");
 
 header("Location: shades.php");
 
+
 ?>
+
+
